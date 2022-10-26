@@ -791,6 +791,12 @@ footer.entry-meta .meta-in {
   color: #ccc;
   margin: 0 0 20px;
 }
+#footer .centercol {
+  text-align: center;
+}
+#footer .lastcol {
+  text-align: right;
+}
 #underfooter {
   background: #191919;
   padding: 15px 0;

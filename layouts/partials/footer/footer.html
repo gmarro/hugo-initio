@@ -14,24 +14,9 @@
 			</div>
 			{{ end }}
 
-			{{ if .Site.Params.showFooterFollowMe }}
-			<div class="col-md-3 widget">
-				<h3 class="widget-title">Follow me</h3>
-				<div class="widget-body">
-					<p class="follow-me-icons">
-            {{ range .Site.Params.social }}
-							{{ if .footer }}
-								<a href="{{ .url }}" target="_blank"><i class="{{ .icon }} fa-1x"></i></a>
-							{{ end }}
-            {{ end }}
-					</p>
-				</div>
-			</div>
-			{{ end }}
-
 			{{ if .Site.Params.showFooterTextWidget }}
-			<div class="col-md-3 widget">
-				<h3 class="widget-title">Text widget</h3>
+			<div class="col-md-6 widget centercol">
+				<!--<h3 class="widget-title">Text widget</h3>-->
 				<div class="widget-body">
 					<p>
 						{{ i18n "footer_text1" . | markdownify }}
@@ -43,19 +28,20 @@
 			</div>
 			{{ end }}
 
-			{{ if .Site.Params.showFooterFormWidget }}
-			<div class="col-md-3 widget">
-				<h3 class="widget-title">Form widget</h3>
+			{{ if .Site.Params.showFooterFollowMe }}
+			<div class="col-md-3 widget lastcol">
+				<h3 class="widget-title">Réseaux sociaux</h3>
 				<div class="widget-body">
-					<p>{{ if .Site.Params.phone }}{{ .Site.Params.phone }}<br>{{ end }}
-					{{ if .Site.Params.email }}<a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a><br>{{ end }}
-					<br>
-					{{ if .Site.Params.address }}{{ .Site.Params.address }}{{ end }}
+					<p class="follow-me-icons">
+            {{ range .Site.Params.social }}
+							{{ if .footer }}
+								<a href="{{ .url }}" target="_blank"><i class="{{ .icon }}"></i></a>
+							{{ end }}
+            {{ end }}
 					</p>
 				</div>
 			</div>
 			{{ end }}
-
 		</div> <!-- /row of widgets -->
 	</div>
 </footer>
@@ -64,17 +50,11 @@
 	<div class="container">
 		<div class="row">
 
-			<div class="col-md-6 widget">
-				<div class="widget-body">
-					<p>{{ if .Site.Params.address}}{{ .Site.Params.address }}{{ end }}</p>
-				</div>
-			</div>
-
-			<div class="col-md-6 widget">
+			<div class="col-md-12 widget">
 				<div class="widget-body">
 					<p class="text-right">
 						Copyright &copy; {{ .Site.Params.year }}, {{ .Site.Params.name }}<br>
-						Design: <a href="http://www.gettemplate.com" rel="designer">Initio by GetTemplate</a> - 
+						Thème modifié sur base de <a href="http://www.gettemplate.com" rel="designer">Initio</a> - 
 						Powered by: <a href="https://gohugo.io/" rel="poweredby">Hugo</a>
 					</p>
 				</div>
