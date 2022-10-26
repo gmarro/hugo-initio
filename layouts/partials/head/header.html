@@ -8,6 +8,7 @@
       </span>
    </h1>
 </div>
-
-{{ partial "head/menu.html" . }}
+{{ if .Site.Params.showMenu }}
+  {{ partial "head/menu.html" . }}
+{{ end }}
 </header>
